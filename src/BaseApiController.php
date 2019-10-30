@@ -130,7 +130,6 @@ class BaseApiController extends ActiveController
      */
     public function beforeAction($action)
     {
-        defined('YII_DEBUG') or define('YII_DEBUG', true);
         $req = Yii::$app->request;
         header('Access-Control-Allow-Origin: '.implode(',', $this->arr_acao));
         header('Access-Control-Allow-Methods: '.implode(',', $this->arr_acam));
